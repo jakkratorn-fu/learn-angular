@@ -1,0 +1,10 @@
+<p>to-do-list-component works!</p>
+<h1>My Tasks today</h1>
+<ul>
+  <li *ngFor="let item of tasks; index as i">
+    <span>{{ item }}</span>
+    <button (click)="deleteTask(i)">Delete</button>
+  </li>
+</ul>
+Add task: <input [(ngModel)]="taskToAdd"/>
+<button (click)="addTask()">Add</button>
